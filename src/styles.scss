@@ -1,0 +1,74 @@
+@import 'assets/style/colors.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card {
+    padding: 1rem;
+}
+
+// .gray-bg {
+//     background-color: $gray;
+// }
+
+// .dark-bg {
+//     background-color: $dark;
+// }
+
+// .mat-sidenav-content,
+// .mat-nav-list,
+// .mat-sidenav,
+// .mat-sidenav.mat-drawer.mat-sidenav.sidenav {
+//     background-color: $dark;
+// }
+
+// hr {
+//     color: $white;
+// }
+
+.mat-drawer-inner-container {
+    border-right: 1px solid $gray;
+}
+
+// input[type="date"],
+// .form-control,
+// .form-select {
+//     background-color: $gray;
+//     border: transparent;
+//     color: $white;
+
+//     &::placeholder {
+//         color: $white;
+//     }
+
+//     &:focus {
+//         box-shadow: none;
+//         border: none;
+//     }
+// }
+
+// .mat-icon {
+//     width: auto !important;
+// }
+
+/////***** SCROLL-BAR GLOBAL STYLES ******/////
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-track {
+    background:$white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $gray;
+    border-radius: 5px;
+    height: 20px;
+}

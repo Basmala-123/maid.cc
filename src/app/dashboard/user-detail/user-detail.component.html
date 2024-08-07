@@ -1,0 +1,17 @@
+
+<div class="container">
+    <button class="btn d-flex align-items-center justify-content-center" (click)="back()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="card">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4">
+                <img [src]="user?.avatar" alt="">
+            </div>
+            <div class="col-12 col-md-8">
+                <h3> Name : <span>{{ user?.first_name + ' '+ user?.last_name}} </span> </h3>
+                <h3> Email : <span>{{ user?.email}}</span></h3>
+            </div>
+        </div>
+    </div>
+</div>

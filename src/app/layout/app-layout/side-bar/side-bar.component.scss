@@ -1,0 +1,67 @@
+@import '../../../../assets/style/colors.scss';
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 10px;
+}
+
+.activeItem {
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: $white !important;
+  background-color: $green;
+}
+
+.nav-item {
+  margin: 10px 0;
+  padding: 5px;
+
+  .nav-link {
+    // color: $white;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .fa-chevron-up {
+    font-size: 10px;
+    transition: all .5s ease;
+  }
+
+  .collapsed .fa-chevron-up {
+    transform: rotate(180deg);
+  }
+
+  .accordion-body ul {
+    list-style: none;
+
+    .nav-item {
+      margin: 0;
+      padding-left: 25px;
+      position: relative;
+
+      a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 5px;
+        height: 110%;
+        transform: translateY(-50%);
+        width: 10px;
+        border-left: 1px solid $gray ;
+        border-bottom: 1px solid $gray;
+        box-sizing: border-box;
+        border-bottom-left-radius: 5px;
+      }
+
+    }
+  }
+}

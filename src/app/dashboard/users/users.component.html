@@ -1,0 +1,24 @@
+<div class="container">
+        <div class="col-12 my-2" *ngIf="!isShown">
+            <section class="card gray-bg">
+                <h3 class="fw-bolder">Dashboard Users</h3>
+                <div class="row users">
+                    <div class="col-6 col-md-2 p-2" *ngFor="let item of dashboardUser">
+                        <div class="card dark-bg my-3" (click)="showDetail(item.id)">
+                           <img [src]="item.avatar" alt="" class="img-fluid">
+                            <h3 class="fs-5 m-3 text-center">{{item.first_name +' '+item.last_name}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div aria-label="navigation" class="d-flex justify-content-between w-75">
+                          <button class="btn page-btn" (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+                          <button class="btn page-btn" (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>         
+                      </div>
+                </div>
+            </section>
+        </div>
+        <div class="row justify-content-center" *ngIf="isShown">
+            <img src="../../../assets/images/notFound.jpg" alt="" srcset="" class="img-fluid">
+        </div>
+</div>

@@ -1,0 +1,24 @@
+@import '../../../assets/style/colors.scss';
+.navigation{
+    width: 75%;
+    justify-content: space-between;
+}
+.page-btn{
+    background-color: $green;
+    color: $white;
+    border: 1px solid transparent;
+}
+.users {
+    .card{
+        height: 250px;
+        cursor: pointer;
+        img{
+            height: 150px;
+            border-radius: 5px ;
+            object-fit: cover;
+        }
+    }
+
+}.img-fluid{
+    width: 350px;
+}

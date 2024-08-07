@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-container position-relative">
+  <mat-sidenav #drawer mode="side" [opened]="openSideNav" class="sidenav position-fixed">
+    <h3 class="p-3 pb-0 ">Dashboard Items</h3>
+    <hr>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3 pt-0">
+      <p class="text-white fw-light">Manage</p>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/users" routerLinkActive="activeItem"><i
+            class="fa-brands fa-microsoft me-2"></i> Home</a>
+      </li>
+
+      <li class="accordion-header nav-item" id="flush-headingOne">
+        <p class=" collapsed d-flex justify-content-between mb-0 align-items-center" type="button"
+          data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <span><i class="fa-solid fa-lock me-2"></i> passwords</span>
+          <i class="fa-solid fa-chevron-up"></i>
+        </p>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordion">
+          <div class="accordion-body">
+            <ul class="p-0">
+              <li class="nav-item mt-3">
+                <a routerLink="/password1" routerLinkActive="activeItem" class="nav-link">passwords 1</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/password2" routerLinkActive="activeItem" class="nav-link">passwords 1</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/password3" routerLinkActive="activeItem" class="nav-link">passwords 1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/page" routerLinkActive="activeItem">
+          <i class="fa-solid fa-chart-line me-2"></i> Home</a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/statics" routerLinkActive="activeItem"><i
+            class="fa-solid fa-compass me-2"></i> Home</a>
+      </li>
+
+
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (open)="sideNavOpen($event)"></app-header>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

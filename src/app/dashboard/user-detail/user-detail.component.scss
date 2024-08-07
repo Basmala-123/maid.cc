@@ -1,0 +1,14 @@
+@import '../../../assets/style/colors.scss';
+.btn{
+    background-color: $green;
+    color: $white;
+    margin: 10px 0;
+}
+.card {
+    img{
+        border-radius:5px ;
+    }
+    h3 span{
+        color: $gray;
+    }
+}
